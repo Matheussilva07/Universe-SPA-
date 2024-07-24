@@ -3,23 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --textColor:white;
+}
+.darkMode{
+    --textColor:black
+}
+
 body{
     font-size: 62.5%; 
     background-image: url(https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1822&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-repeat: no-repeat;
     background-size: fill;
 
-    color: white;
+    color: var(--textColor);
+
+    transition: 0.2s;
    
 }
-
 header{
 
     padding: 2.5rem;
+
+    display: flex;
+
+    align-items: center;
     
 }
 header a{
-    color: white;
+    color: var(--textColor);
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 
@@ -28,6 +40,11 @@ header a{
     margin-right: 1.6rem;
     font-weight: bold;
 
+    transition: 0.2s;
+
+}
+header a:hover{
+    text-shadow: -1px 1px 1px white;
 }
 
 #app{
@@ -41,10 +58,10 @@ header a{
 
 #app a{
 
-    color: white;
+    color: var(--textColor);
     font-size: 1.4rem;
 
-    border: 3px solid white;
+    border: 3px solid var(--textColor);
     border-radius: 2px;
 
     padding: 1rem;
@@ -57,10 +74,27 @@ header a{
     transition: 0.2s;
 }
 #app a:hover{
-    color: rgb(215, 206, 206);
-    border: 3px solid rgb(215, 206, 206);
+    text-shadow: -1px 1px 1px white;
+    
 }
 .margenTop{
     margin-top: 2rem;
     text-align: justify;
 }
+#botaoTema{
+    font-size: 2rem;
+
+    color: var(--textColor);
+    background: none;
+
+    border: none;
+
+    margin-left: 55rem;
+
+    cursor: pointer;
+
+}
+#botaoTema:hover{
+    filter: drop-shadow(1px 1px 1px white);
+}
+

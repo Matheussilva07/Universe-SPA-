@@ -11,3 +11,13 @@ router.handle()
 
 window.onpopstate = ()=> router.handle()
 window.route = () => router.route()
+
+
+const botaoTema = document.querySelector("#botaoTema")
+const html = document.querySelector('html')
+
+botaoTema.addEventListener('click', MudarTema)
+
+function MudarTema(){
+  html.classList.toggle('darkMode')
+}
